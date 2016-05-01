@@ -6,6 +6,6 @@ I needed to send audio-derived data from one Particle Photon to another using Wi
 I implemented a basic UDP sender/receiver but then I realized that I could use the publish/subscribe cloud functions. Indeed Particle.publish() can send up to 1 message per second with optional data of max 255 byte and I needed to transfer a hundred of data per second where each data is a 8-bit number.
 The only thing I had to take care of has been to encode a sequence of 8-bit numbers (the payload) as a Particle String (or as a C const char *)  and then to convert those back to an array of integers.
 
-In the following you may find a basic UDP sender/receiver.
+In the following you may find a basic UDP sender/receiver and basic Publish.publish()/.subscribe() sennder/receiver.
 
 I'm still working on the project, so those are the starting points, as I go on I will publish the updates.
